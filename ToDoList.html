@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ToDoList</title>
+        <link rel="stylesheet" href="ToDoList.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            function AddBox(button){
+                const btnId = button.id;
+                const btnClass = document.querySelector(`.${btnId}`);
+                if(btnClass === null){
+                    $(`#${btnId}`).parent().prepend(
+                    `<div class = '${btnId} box'>
+                        <input type='text' name='TextBox' id = 'inputbox'/> 
+                        <input id = 'xbutton' type='button' value='✘' onclick='Delete();'/> 
+                        <br> 
+                    </div>`
+                    );
+                    $("#inputbox").ac(function(){
+                        ('test')
+                    })
+                }
+            }
+            function Delete(){
+                $( 'div' ).remove( '.box' );
+            }
+        </script>                                   
+    </head>
+    <body>
+        <div class ='title'>
+            <h1>To Do List</h1>
+            <div class = 'date'>
+            <h2 id='Today'>0 : 0 : 0</h2>
+            <h2 id='date'>0 : 0 : 0</h2>
+            </div>
+            <script src="clock.js"></script>
+        </div>
+        <div class='text'>
+            <div>
+                <p>World Quest</p>
+                    <form action="">
+                        <input class = 'pbutton' id = 'button1' type="button" value="✛" onclick="AddBox(this);"/>
+                    </form>
+                <p>Weekly Quest</p>
+                    <form action="">
+                        <input class = 'pbutton' id = 'button2' type="button" value="✛" onclick="AddBox(this);"/>
+                    </form>
+            </div>
+            <div>
+                <p>Daily Quest</p>
+                    <form action="">
+                        <input class = 'pbutton' id = 'button3' type="button" value="✛" onclick="AddBox(this);"/>
+                    </form>
+                <p style="color: rgb(255, 129, 129);">Notice</p>
+                    <form action="">
+                        <input class = 'pbutton' id = 'button4' type="button" value="✛" onclick="AddBox(this);"/>
+                    </form>
+            </div>        
+        </div>
+    </body>
+</html>

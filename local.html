@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function localSave() {
+            let arr = ["test", "drgwert"];
+            localStorage.setItem("WorldQuest" , arr);
+        }
+        const localLoad = (test = "test" , test1) => {
+            const val = localStorage.getItem("obj");
+            const p = document.querySelector(".text");
+            p.innerHTML = val;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" value="test"/>
+    <p class="text"> p tag </p>
+    <button value="" onclick= localSave()> localSave </button> 
+    <button value="" onclick= localLoad()> localLoad </button>   
+</body>
+</html>
