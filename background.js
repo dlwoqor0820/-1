@@ -10,6 +10,6 @@ const chosenImage = images[Math.floor(Math.random() * images.length)];
 
 const bgImage = document.createElement("img");
 
-bgImage.src = `${chosenImage}`;
+bgImage.src = `/${chosenImage}`;
 bgImage.id = "background"
 document.body.appendChild(bgImage);
