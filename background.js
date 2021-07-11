@@ -10,6 +10,6 @@ const chosenImage = images[Math.floor(Math.random() * images.length)];
 
 const bgImage = document.createElement("img");
 
-bgImage.src = `JS-Challenge/images/${chosenImage}`;
+bgImage.src = `images/${chosenImage}`;
 bgImage.id = "background"
 document.body.appendChild(bgImage);
