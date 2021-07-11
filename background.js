@@ -1,5 +1,4 @@
 const images = [
-    "코노스바.jpg",
     "팔조령.jpeg",
     "아양교.jpg",
     "욱수지.jpg",
@@ -11,6 +10,6 @@ const chosenImage = images[Math.floor(Math.random() * images.length)];
 
 const bgImage = document.createElement("img");
 
-bgImage.src = `images/${chosenImage}`;
+bgImage.src = `${chosenImage}`;
 bgImage.id = "background"
 document.body.appendChild(bgImage);
